@@ -6,20 +6,23 @@ func main(){
 
 var robst,cobst,rqueen,cqueen int
 var mat [5][5]int
-var sum,n int=0,5
+var sum,n,b int=0,5,0
 fmt.Println("Enter queen's position in row :")
 fmt.Scanf("%d",&rqueen)
 fmt.Println("Enter queen's position in column :")
 fmt.Scanf("%d",&cqueen)
-fmt.Println("Enter obstacle's position in row :")
+fmt.Println("Enter no.of obstacles :")
+fmt.Scanf("%d",&b)
+for i :=1;i <= b;i++ {
+fmt.Println("Enter row of obstacle number",i)
 fmt.Scanf("%d",&robst)
-fmt.Println("Enter obstacle's position in column :")
+fmt.Println("Enter column of obstacle number",i)
 fmt.Scanf("%d",&cobst)
-
+mat[robst][cobst]=-1
+}
 
 
 mat[rqueen][cqueen]=1 
-mat[robst][cobst]=-1
 fmt.Println(mat)
 //check all ways
 
@@ -91,4 +94,3 @@ for i :=cqueen-1; i >=0; i-- {
      fmt.Println(sum)
 }
 
-    
